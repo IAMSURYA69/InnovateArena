@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bengal's Hidden Gems & Stays</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="subpages.css">
+  <style>
+    /* Unique banner styling to differentiate from destinations */
+    .sub-hero--dark {
+      background-position: 50% 30%;
+    }
+
+    .sub-hero--dark .sub-hero-overlay {
+      background: linear-gradient(180deg, rgba(10, 5, 5, 0.4) 0%, rgba(10, 5, 5, 0.8) 50%, #1a1a1a 100%);
+    }
+
+    .sub-main--dark {
+      background: #1a1a1a;
+    }
+
+    .sub-card--dark {
+      background: #252525;
+      border-color: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .sub-card--dark .sub-card-body h3 {
+      color: var(--cream);
+    }
+
+    .sub-card--dark .sub-card-body p {
+      color: rgba(253, 246, 227, 0.7);
+    }
+
+    .hotel-price {
+      font-weight: 700;
+      color: var(--warm-gold);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .hotel-rating {
+      color: var(--warm-gold);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .sub-card-body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sub-card-body p {
+      flex-grow: 1;
+    }
+
+    .hotel-action {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .book-btn {
+      background: var(--warm-gold);
+      color: var(--dark-earth);
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .book-btn:hover {
+      background: #fff;
+    }
+
+    /* Filter bar overrides for dark mode */
+    .filter-bar--dark {
+      background: rgba(26, 26, 26, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head>
+
+<body style="background: #1a1a1a;">
+
+  <!-- Back Nav -->
+  <nav class="sub-nav">
+    <a href="index.html" class="sub-back">← Back to Home</a>
+    <span class="sub-nav-title">Hidden Gems</span>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="sub-hero sub-hero--dark"
+    style="background-image: url('https://northbengaltourism.com/blog/wp-content/uploads/2017/10/Dooars_e-e1507966662185.jpg');">
+    <div class="sub-hero-overlay"></div>
+    <div class="sub-hero-content">
+      <p class="sub-eyebrow">Off the Beaten Path</p>
+      <h1>Secret <em>Sanctuaries</em></h1>
+      <p class="sub-lead">Discover Bengal's untold stories, pristine landscapes, and exclusive boutique stays away from
+        the crowds.</p>
+    </div>
+  </header>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar filter-bar--dark">
+    <div class="filter-bar-inner">
+      <div class="filter-search-wrap">
+        <span class="filter-search-icon">🔍</span>
+        <input type="text" id="filterSearch" class="filter-search" placeholder="Search hidden places…"
+          autocomplete="off">
+      </div>
+      <div class="filter-pills">
+        <button class="filter-pill active" data-filter="all">All Places</button>
+        <button class="filter-pill" data-filter="north">⛰️ North Bengal</button>
+        <button class="filter-pill" data-filter="central">🌿 Central/West</button>
+        <button class="filter-pill" data-filter="south">🌊 South Bengal</button>
+      </div>
+      <span class="filter-result-count" id="resultCount">Showing all items</span>
+    </div>
+  </div>
+
+  <!-- Full Destinations Grid -->
+  <main class="sub-main sub-main--dark">
+    <div class="sub-grid">
+
+      <!-- NORTH BENGAL -->
+      <div class="sub-card sub-card--dark" data-category="north" data-name="tinchuley eco resort">
+        <div class="sub-card-img"><img src="assets\tinchuley.jpg" alt="Tinchuley Eco Resort"></div>
+        <div class="sub-card-body">
+          <h3>Tinchuley Pine Resort</h3>
+          <div class="hotel-rating">★★★★★ (4.9)</div>
+          <p>A tranquil eco-village stay surrounded by tea gardens and pine forests. Perfect for unhindered Himalayan
+            sunrise views.</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹4,500 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card sub-card--dark" data-category="north" data-name="lepchajagat homestay">
+        <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=600"
+            alt="Lepchajagat Homestay"></div>
+        <div class="sub-card-body">
+          <h3>Lepchajagat Forest Homestay</h3>
+          <div class="hotel-rating">★★★★☆ (4.7)</div>
+          <p>Cozy wooden cabins deep within a reserved forest of rhododendron and oak, just a few kilometers from
+            Darjeeling.</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹3,200 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card sub-card--dark" data-category="north" data-name="sandakphu trekker hut">
+        <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600"
+            alt="Sandakphu Base"></div>
+        <div class="sub-card-body">
+          <h3>Sandakphu Trekker's Lodge</h3>
+          <div class="hotel-rating">★★★★☆ (4.5)</div>
+          <p>Basic but warm accommodations at the highest peak of West Bengal. The only place to see four of the world's
+            highest mountains.</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹2,800 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card sub-card--dark" data-category="north" data-name="lepchakha">
+        <div class="sub-card-img"><img src="https://northbengaltourism.com/images/offbeat/lepchakha_village_1.webp"
+            alt="lepchakha"></div>
+        <div class="sub-card-body">
+          <h3>Lepchakha Homestay</h3>
+          <div class="hotel-rating">★★★★☆ (4.5)</div>
+          <p>A tiny village inside the Buxa hills with panoramic views of Bhutan hills.</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹2,200 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card sub-card--dark" data-category="north" data-name="Sittong">
+        <div class="sub-card-img"><img
+            src="https://hillstarholidays.com/wp-content/uploads/2022/09/1587890934_dsc_0048_1-1140x760.jpg"
+            alt="Sittong"></div>
+        <div class="sub-card-body">
+          <h3>Sittong Homestay</h3>
+          <div class="hotel-rating">★★★★☆ (4.5)</div>
+          <p>Known as the Orange Village.</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹4,200 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card sub-card--dark" data-category="north" data-name="Chilapata Forest">
+        <div class="sub-card-img"><img src="https://mysticdooars.com/images/destination/main/chilapata_800.jpg"
+            alt="Chilapata Forest"></div>
+        <div class="sub-card-body">
+          <h3>Chilapata Forest Homestay</h3>
+          <div class="hotel-rating">★★★★☆ (4.5)</div>
+          <p>Dense forest.</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹3,600 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- CENTRAL/WEST BENGAL -->
+      <div class="sub-card sub-card--dark" data-category="central" data-name="garh panchkot resort">
+        <div class="sub-card-img"><img src="assets\GarhPanchkot.jpg" alt="Garh Panchkot"></div>
+        <div class="sub-card-body">
+          <h3>Garh Panchkot Heritage</h3>
+          <div class="hotel-rating">★★★★☆ (4.6)</div>
+          <p>Stay beside the ancient ruins of the Panchet foothills. A perfect weekend getaway wrapped in greenery and
+            history.</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹5,000 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card sub-card--dark" data-category="central" data-name="duarsini forest camp">
+        <div class="sub-card-img"><img
+            src="https://img-cdn.publive.online/fit-in/640x360/filters:format(webp)/indian-express-bangla/media/media_files/2025/11/04/duarsini-2-2025-11-04-19-54-18.jpg"
+            alt="Duarsini"></div>
+        <div class="sub-card-body">
+          <h3>Duarsini Forest Cabins</h3>
+          <div class="hotel-rating">★★★★☆ (4.8)</div>
+          <p>A tribal village retreat surrounded by Dalma hills. Stay in rustic eco-cabins and listen to the hypnotic
+            beat of Madal drums.</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹3,500 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card sub-card--dark" data-category="central" data-name="jhargram rajbari">
+        <div class="sub-card-img"><img
+            src="https://jhargrampalaceheritage.com/wp-content/uploads/2025/03/the_palace.jpg" alt="Jhargram Rajbari">
+        </div>
+        <div class="sub-card-body">
+          <h3>Jhargram Palace Stay</h3>
+          <div class="hotel-rating">★★★★★ (4.9)</div>
+          <p>Experience royal living in the majestic Jhargram Rajbari, surrounded by dense Sal forests and tribal
+            heritage.</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹8,500 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card sub-card--dark" data-category="central" data-name="Mayapur">
+        <div class="sub-card-img"><img
+            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/57/7d/ec/photo0jpg.jpg?w=900&h=-1&s=1"
+            alt="Mayapur"></div>
+        <div class="sub-card-body">
+          <h3>Mayapur ISKCON</h3>
+          <div class="hotel-rating">★★★★☆ (4.6)</div>
+          <p>One of the large and modern Temples</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹1,000 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card sub-card--dark" data-category="central" data-name="Bishnupur">
+        <div class="sub-card-img"><img
+            src="https://www.sahapedia.org/sites/default/files/styles/sp_inline_images/public/Madanmohan%20temple-%20httpswww.flickr.comphotostathagata_sikdar6815791008-min.jpg?itok=MOQxvIfu"
+            alt="Bishnupur"></div>
+        <div class="sub-card-body">
+          <h3>Bishnupur Temples</h3>
+          <div class="hotel-rating">★★★★☆ (4.6)</div>
+          <p>Famous for its terracotta temples, but still peaceful compared to major tourist hubs.</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹2,000 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card sub-card--dark" data-category="central" data-name="Baranti">
+        <div class="sub-card-img"><img
+            src="https://puruliatourism.com/wp-content/uploads/2023/01/muradi_lake__purulia__india_by_anuranit_ddh1om6-fullview.jpg"
+            alt="Baranti"></div>
+        <div class="sub-card-body">
+          <h3>Baranti Lake</h3>
+          <div class="hotel-rating">★★★★☆ (4.6)</div>
+          <p>A quiet lakeside destination.</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹1,500 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- SOUTH BENGAL -->
+      <div class="sub-card sub-card--dark" data-category="south" data-name="mousuni island camp">
+        <div class="sub-card-img"><img
+            src="https://www.nomadicweekends.com/wp-content/uploads/2017/06/14364852_1131309143629482_2212321615288441029_n.jpg"
+            alt="Mousuni Island"></div>
+        <div class="sub-card-body">
+          <h3>Mousuni Island Beach Camp</h3>
+          <div class="hotel-rating">★★★★☆ (4.7)</div>
+          <p>Where the river meets the sea. Sleep in luxury beach tents, enjoy bonfires, and watch millions of stars at
+            night.</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹2,500 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="sub-card sub-card--dark" data-category="south" data-name="tajpur beach retreat">
+        <div class="sub-card-img"><img
+            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/0f/7c/8e/same-as-above.jpg?w=900&h=500&s=1"
+            alt="Tajpur Beach"></div>
+        <div class="sub-card-body">
+          <h3>Tajpur Pine Beach Retreat</h3>
+          <div class="hotel-rating">★★★★☆ (4.6)</div>
+          <p>A secluded beach flanked by dense tamarisk trees. Famous for its red crabs and pristine, uncrowded sands.
+          </p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹4,200 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card sub-card--dark" data-category="south" data-name="taki river house">
+        <div class="sub-card-img"><img
+            src="https://static.toiimg.com/thumb/msid-47955296,width-550,height-433/47955296.jpg"
+            alt="Taki River House"></div>
+        <div class="sub-card-body">
+          <h3>Taki River Guest House</h3>
+          <div class="hotel-rating">★★★★☆ (4.5)</div>
+          <p>A peaceful homestay on the banks of the Ichamati river, looking directly across the border into Bangladesh.
+          </p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹3,800 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card sub-card--dark" data-category="south" data-name="Henry's Island camp">
+        <div class="sub-card-img"><img src="https://im.whatshot.in/img/2020/Jun/henry-1592009232.jpg"
+            alt="Henry's Island"></div>
+        <div class="sub-card-body">
+          <h3>Henry's Island</h3>
+          <div class="hotel-rating">★★★★☆ (4.7)</div>
+          <p>A peaceful alternative to crowded beaches</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹2,500 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-card sub-card--dark" data-category="south" data-name="Piyali Island">
+        <div class="sub-card-img"><img
+            src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/2017/09/27205420/piyali-islandsfeat-%5E.jpg?w=1200&h=628&fill=blur&fit=fill"
+            alt="Piyali Island"></div>
+        <div class="sub-card-body">
+          <h3>Piyali Island</h3>
+          <div class="hotel-rating">★★★★☆ (4.7)</div>
+          <p>Piyali is one of the few places in West Bengal where a river cruise is a real possibility</p>
+          <div class="hotel-action">
+            <span class="hotel-price">₹2,500 <span
+                style="font-size: 0.7rem; color: rgba(253, 246, 227, 0.5); font-weight: 400;">/ night</span></span>
+            <a href="#" class="book-btn">Book</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- No Results State -->
+    <div class="no-results" id="noResults" style="color: #fff;">
+      <span class="no-results-icon">⛺</span>
+      <h3 style="color: #fff;">No hidden places found</h3>
+      <p>Try a different search term or region</p>
+    </div>
+  </main>
+
+  <script src="filter.js"></script>
+</body>
+
+</html>

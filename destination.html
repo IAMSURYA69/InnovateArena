@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bengali Destinations — Explore the Regions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="subpages.css">
+<style>
+  .hotel-price {
+    font-weight: 700;
+    color: var(--crimson);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+  }
+  .hotel-rating {
+    color: var(--warm-gold);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .sub-card-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .sub-card-body p {
+    flex-grow: 1;
+  }
+  .hotel-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+  }
+  .book-btn {
+    background: var(--dark-earth);
+    color: var(--cream);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .book-btn:hover {
+    background: var(--crimson);
+  }
+</style>
+</head>
+<body>
+
+<!-- Back Nav -->
+<nav class="sub-nav">
+  <a href="index.html" class="sub-back">← Back to Home</a>
+  <span class="sub-nav-title">Destinations & Stays</span>
+</nav>
+
+<!-- Hero Banner -->
+<header class="sub-hero" style="background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1400');">
+  <div class="sub-hero-overlay"></div>
+  <div class="sub-hero-content">
+    <p class="sub-eyebrow">Explore Bengal</p>
+    <h1>Region-based <em>Destinations</em></h1>
+    <p class="sub-lead">Discover breathtaking locations and premium stays across North, Central, and South Bengal.</p>
+  </div>
+</header>
+
+<!-- Filter Bar -->
+<div class="filter-bar filter-bar--light">
+  <div class="filter-bar-inner">
+    <div class="filter-search-wrap">
+      <span class="filter-search-icon">🔍</span>
+      <input type="text" id="filterSearch" class="filter-search" placeholder="Search places or hotels…" autocomplete="off">
+    </div>
+    <div class="filter-pills">
+      <button class="filter-pill active" data-filter="all">All Regions</button>
+      <button class="filter-pill" data-filter="north">⛰️ North Bengal</button>
+      <button class="filter-pill" data-filter="central">🏛️ Central Bengal</button>
+      <button class="filter-pill" data-filter="south">🌊 South Bengal</button>
+    </div>
+    <span class="filter-result-count" id="resultCount">Showing all items</span>
+  </div>
+</div>
+
+<!-- Full Destinations Grid -->
+<main class="sub-main">
+  <div class="sub-grid">
+
+    <!-- NORTH BENGAL -->
+    <div class="sub-card" data-category="north" data-name="darjeeling tea estate">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600" alt="Darjeeling Tea Estate"></div>
+      <div class="sub-card-body">
+        <h3>Darjeeling Tea Estate Resort</h3>
+        <div class="hotel-rating">★★★★★ (4.9)</div>
+        <p>Wake up to the aroma of fresh tea leaves and panoramic views of Kanchenjunga. Includes guided tea tasting.</p>
+        <div class="hotel-action">
+          <span class="hotel-price">₹12,500 <span style="font-size: 0.7rem; color: var(--text-light); font-weight: 400;">/ night</span></span>
+          <a href="#" class="book-btn">Book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="north" data-name="kalimpong heritage">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=600" alt="Kalimpong Heritage"></div>
+      <div class="sub-card-body">
+        <h3>Kalimpong Heritage Stay</h3>
+        <div class="hotel-rating">★★★★☆ (4.7)</div>
+        <p>A beautifully restored colonial bungalow surrounded by orchid gardens and mist-covered hills.</p>
+        <div class="hotel-action">
+          <span class="hotel-price">₹8,200 <span style="font-size: 0.7rem; color: var(--text-light); font-weight: 400;">/ night</span></span>
+          <a href="#" class="book-btn">Book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="north" data-name="dooars jungle lodge">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" alt="Dooars Jungle Lodge"></div>
+      <div class="sub-card-body">
+        <h3>Dooars Jungle Lodge</h3>
+        <div class="hotel-rating">★★★★☆ (4.6)</div>
+        <p>Immersive eco-resort on the edge of Jaldapara National Park. Includes morning elephant safaris.</p>
+        <div class="hotel-action">
+          <span class="hotel-price">₹6,800 <span style="font-size: 0.7rem; color: var(--text-light); font-weight: 400;">/ night</span></span>
+          <a href="#" class="book-btn">Book</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CENTRAL BENGAL -->
+    <div class="sub-card" data-category="central" data-name="kolkata luxury">
+      <div class="sub-card-img"><img src="assets/kolkata.jpg" alt="Kolkata Luxury" onerror="this.src='https://images.unsplash.com/photo-1558422504-3d17542c1799?w=600'"></div>
+      <div class="sub-card-body">
+        <h3>The Grand Calcutta</h3>
+        <div class="hotel-rating">★★★★★ (4.8)</div>
+        <p>Experience colonial grandeur in the heart of the city. Classic architecture meets modern luxury.</p>
+        <div class="hotel-action">
+          <span class="hotel-price">₹15,000 <span style="font-size: 0.7rem; color: var(--text-light); font-weight: 400;">/ night</span></span>
+          <a href="#" class="book-btn">Book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="central" data-name="shantiniketan art retreat">
+      <div class="sub-card-img"><img src="assets/shantiniketan.png" alt="Shantiniketan Art Retreat" onerror="this.src='https://images.unsplash.com/photo-1582283929424-64478332152d?w=600'"></div>
+      <div class="sub-card-body">
+        <h3>Baul Art Retreat, Shantiniketan</h3>
+        <div class="hotel-rating">★★★★☆ (4.9)</div>
+        <p>A tranquil boutique resort built with local red soil, featuring live Baul music and authentic Bengali cuisine.</p>
+        <div class="hotel-action">
+          <span class="hotel-price">₹5,500 <span style="font-size: 0.7rem; color: var(--text-light); font-weight: 400;">/ night</span></span>
+          <a href="#" class="book-btn">Book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="central" data-name="murshidabad palace stay">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=600" alt="Murshidabad Palace Stay"></div>
+      <div class="sub-card-body">
+        <h3>Nawabi Palace Hotel, Murshidabad</h3>
+        <div class="hotel-rating">★★★★★ (4.7)</div>
+        <p>Live like royalty in a meticulously restored 18th-century palace overlooking the Bhagirathi river.</p>
+        <div class="hotel-action">
+          <span class="hotel-price">₹11,000 <span style="font-size: 0.7rem; color: var(--text-light); font-weight: 400;">/ night</span></span>
+          <a href="#" class="book-btn">Book</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOUTH BENGAL -->
+    <div class="sub-card" data-category="south" data-name="sundarbans eco resort">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600" alt="Sundarbans Eco Resort"></div>
+      <div class="sub-card-body">
+        <h3>Sundarbans Mangrove Eco Resort</h3>
+        <div class="hotel-rating">★★★★☆ (4.5)</div>
+        <p>Sustainable cottages nestled in the mangrove forests. Experience boat safaris to spot the Royal Bengal Tiger.</p>
+        <div class="hotel-action">
+          <span class="hotel-price">₹7,500 <span style="font-size: 0.7rem; color: var(--text-light); font-weight: 400;">/ night</span></span>
+          <a href="#" class="book-btn">Book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="south" data-name="digha beach resort">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600" alt="Digha Beach Resort"></div>
+      <div class="sub-card-body">
+        <h3>Bay View Resort, Digha</h3>
+        <div class="hotel-rating">★★★★☆ (4.3)</div>
+        <p>Premium ocean-facing rooms with private balconies, direct beach access, and fresh seafood dining.</p>
+        <div class="hotel-action">
+          <span class="hotel-price">₹6,000 <span style="font-size: 0.7rem; color: var(--text-light); font-weight: 400;">/ night</span></span>
+          <a href="#" class="book-btn">Book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="south" data-name="mandarmani luxury camp">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Mandarmani Luxury Camp"></div>
+      <div class="sub-card-body">
+        <h3>Mandarmani Sands Luxury Camp</h3>
+        <div class="hotel-rating">★★★★★ (4.8)</div>
+        <p>Glamping at its finest. Enjoy beachfront luxury tents with private plunge pools and sunset dinners.</p>
+        <div class="hotel-action">
+          <span class="hotel-price">₹9,800 <span style="font-size: 0.7rem; color: var(--text-light); font-weight: 400;">/ night</span></span>
+          <a href="#" class="book-btn">Book</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- No Results State -->
+  <div class="no-results" id="noResults">
+    <span class="no-results-icon">🗺️</span>
+    <h3>No destinations found</h3>
+    <p>Try a different search term or region</p>
+  </div>
+</main>
+
+<script src="filter.js"></script>
+</body>
+</html>

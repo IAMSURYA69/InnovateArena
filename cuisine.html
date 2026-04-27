@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bengali Cuisine — A Feast of Flavours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="subpages.css">
+</head>
+<body>
+
+<!-- Back Nav -->
+<nav class="sub-nav">
+  <a href="index.html" class="sub-back">← Back to Home</a>
+  <span class="sub-nav-title">Bengali Cuisine</span>
+</nav>
+
+<!-- Hero Banner -->
+<header class="sub-hero" style="background-image: url('https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=1400');">
+  <div class="sub-hero-overlay"></div>
+  <div class="sub-hero-content">
+    <p class="sub-eyebrow">Bengali Gastronomy</p>
+    <h1>A Feast of <em>Flavours</em></h1>
+    <p class="sub-lead">Mustard, hilsa, and the gentle heat of a slow-cooked tradition — explore the full culinary heritage of Bengal.</p>
+  </div>
+</header>
+
+<!-- Filter Bar -->
+<div class="filter-bar">
+  <div class="filter-bar-inner">
+    <div class="filter-search-wrap">
+      <span class="filter-search-icon">🔍</span>
+      <input type="text" id="filterSearch" class="filter-search" placeholder="Search dishes…" autocomplete="off">
+    </div>
+    <div class="filter-pills">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="fish">🐟 Fish</button>
+      <button class="filter-pill" data-filter="meat">🍖 Meat</button>
+      <button class="filter-pill" data-filter="vegetarian">🥬 Vegetarian</button>
+      <button class="filter-pill" data-filter="street-food">🛒 Street Food</button>
+    </div>
+    <span class="filter-result-count" id="resultCount">Showing all 14 items</span>
+  </div>
+</div>
+
+<!-- Full Cuisine Grid -->
+<main class="sub-main">
+  <div class="sub-grid">
+
+    <div class="sub-card" data-category="fish" data-name="macher jhol">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600" alt="Macher Jhol"></div>
+      <div class="sub-card-body">
+        <h3>Macher Jhol</h3>
+        <span class="sub-bn">মাছের ঝোল</span>
+        <p>The quintessential Bengali fish curry — a light, turmeric-bright broth with rohu or katla, tomatoes, and potatoes. Simple, soul-restoring perfection.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="fish" data-name="shorshe ilish">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600" alt="Shorshe Ilish"></div>
+      <div class="sub-card-body">
+        <h3>Shorshe Ilish</h3>
+        <span class="sub-bn">সর্ষে ইলিশ</span>
+        <p>Hilsa fish — the king of Bengali tables — steamed in a pungent mustard paste with green chilies. A seasonal monsoon delicacy of extraordinary depth.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="meat" data-name="kosha mangsho">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=600" alt="Kosha Mangsho"></div>
+      <div class="sub-card-body">
+        <h3>Kosha Mangsho</h3>
+        <span class="sub-bn">কষা মাংস</span>
+        <p>Slow-braised mutton in a deep, dark gravy of caramelized onions, yogurt, and warming spices. The proud centerpiece of every Bengali celebration.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="fish" data-name="chingri malaikari">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600" alt="Chingri Malaikari"></div>
+      <div class="sub-card-body">
+        <h3>Chingri Malaikari</h3>
+        <span class="sub-bn">চিংড়ি মালাইকারি</span>
+        <p>Prawns simmered in velvety coconut milk with whole spices — a rich, aromatic curry that speaks of Bengal's coastal abundance.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="vegetarian" data-name="aloo posto">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1631452180539-96aca7d48617?w=600" alt="Aloo Posto"></div>
+      <div class="sub-card-body">
+        <h3>Aloo Posto</h3>
+        <span class="sub-bn">আলু পোস্তো</span>
+        <p>Potatoes cooked in a paste of white poppy seeds — nutty, creamy and utterly comforting. The beloved everyday dish no Bengali can live without.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="vegetarian" data-name="mishti pulao">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=600" alt="Mishti Pulao"></div>
+      <div class="sub-card-body">
+        <h3>Mishti Pulao</h3>
+        <span class="sub-bn">মিষ্টি পোলাও</span>
+        <p>Fragrant sweet rice with ghee, raisins, and cashews — the perfect companion to rich non-vegetarian curries at festivals and weddings.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="vegetarian" data-name="luchi alur dom">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600" alt="Luchi Alur Dom"></div>
+      <div class="sub-card-body">
+        <h3>Luchi-Alur Dom</h3>
+        <span class="sub-bn">লুচি আলুর দম</span>
+        <p>Puffy fried bread paired with spicy slow-cooked potato curry — a Sunday morning ritual and quintessential Bengali comfort food.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="fish" data-name="bhapa ilish">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600" alt="Bhapa Ilish"></div>
+      <div class="sub-card-body">
+        <h3>Bhapa Ilish</h3>
+        <span class="sub-bn">ভাপা ইলিশ</span>
+        <p>Hilsa steamed in mustard and coconut paste inside banana leaf — silky, pungent, and deeply aromatic. The pinnacle of monsoon Bengali cooking.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="street-food" data-name="puchka">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1626776876729-bab4369a5a5a?w=600" alt="Puchka"></div>
+      <div class="sub-card-body">
+        <h3>Puchka</h3>
+        <span class="sub-bn">পুচকা</span>
+        <p>Crispy semolina shells filled with spiced potato mash and tangy tamarind water — Kolkata's most beloved street food, an evening ritual.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="street-food" data-name="kathi roll">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600" alt="Kathi Roll"></div>
+      <div class="sub-card-body">
+        <h3>Kathi Roll</h3>
+        <span class="sub-bn">কাঠি রোল</span>
+        <p>Invented at Nizam's in Kolkata — flaky paratha wrapped around kebab, egg, and chutney. The original Indian street wrap.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="street-food" data-name="jhalmuri">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600" alt="Jhalmuri"></div>
+      <div class="sub-card-body">
+        <h3>Jhalmuri</h3>
+        <span class="sub-bn">ঝালমুড়ি</span>
+        <p>Puffed rice tossed with mustard oil, green chilies, onions, and spices in a paper cone — Kolkata's iconic walk-and-eat snack.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="street-food" data-name="beguni">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600" alt="Beguni"></div>
+      <div class="sub-card-body">
+        <h3>Beguni</h3>
+        <span class="sub-bn">বেগুনি</span>
+        <p>Sliced eggplant dipped in spiced gram flour batter and deep-fried to golden perfection — the essential monsoon companion alongside khichuri.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="fish" data-name="doi maach">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600" alt="Doi Maach"></div>
+      <div class="sub-card-body">
+        <h3>Doi Maach</h3>
+        <span class="sub-bn">দই মাছ</span>
+        <p>Fish simmered in creamy yogurt sauce with mild spices — a rich, comforting dish with a silky tang, perfect for special occasions.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="vegetarian" data-name="shukto">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600" alt="Shukto"></div>
+      <div class="sub-card-body">
+        <h3>Shukto</h3>
+        <span class="sub-bn">শুক্তো</span>
+        <p>A unique bitter-sweet medley of vegetables in milk and mustard — the traditional Bengali meal opener that cleanses the palate.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- No Results State -->
+  <div class="no-results" id="noResults">
+    <span class="no-results-icon">🍽️</span>
+    <h3>No dishes found</h3>
+    <p>Try a different search term or category</p>
+  </div>
+</main>
+
+<script src="filter.js"></script>
+</body>
+</html>

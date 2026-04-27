@@ -1,0 +1,470 @@
+/* ═══════════════════════════════════════════
+   SUBPAGE STYLES — Cuisine & Desserts
+   ═══════════════════════════════════════════ */
+
+/* --- Sub Nav --- */
+.sub-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background: rgba(28, 12, 6, 0.92);
+  backdrop-filter: blur(16px) saturate(1.6);
+  -webkit-backdrop-filter: blur(16px) saturate(1.6);
+  z-index: 100;
+  border-bottom: 1px solid rgba(232, 184, 75, 0.1);
+}
+
+.sub-back {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--warm-gold);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.sub-back:hover {
+  color: #fff;
+  transform: translateX(-3px);
+}
+
+.sub-nav-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--cream);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* --- Hero Banner --- */
+.sub-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 360px;
+  max-height: 500px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.sub-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(28, 12, 6, 0.3) 0%,
+    rgba(28, 12, 6, 0.6) 50%,
+    rgba(28, 12, 6, 0.95) 100%
+  );
+}
+
+.sub-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 3rem 2rem 3.5rem;
+  max-width: 700px;
+}
+
+.sub-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--warm-gold);
+  margin-bottom: 0.8rem;
+}
+
+.sub-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.sub-hero-content h1 em {
+  font-style: italic;
+  color: var(--warm-gold);
+}
+
+.sub-lead {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: rgba(253, 246, 227, 0.7);
+  line-height: 1.7;
+}
+
+/* --- Main Content --- */
+.sub-main {
+  padding: 4rem 3rem 6rem;
+  background: var(--cream);
+  min-height: 60vh;
+}
+
+/* --- Card Grid --- */
+.sub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Card --- */
+.sub-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(44, 24, 16, 0.06);
+  border: 1px solid rgba(44, 24, 16, 0.04);
+  transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 20px 50px rgba(44, 24, 16, 0.12),
+    0 0 0 1px rgba(192, 57, 43, 0.08);
+}
+
+.sub-card-img {
+  height: 220px;
+  overflow: hidden;
+}
+
+.sub-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.sub-card:hover .sub-card-img img {
+  transform: scale(1.1);
+}
+
+.sub-card-body {
+  padding: 1.3rem 1.5rem 1.6rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-card-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark-earth);
+  margin-bottom: 0.25rem;
+  line-height: 1.25;
+}
+
+.sub-bn {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--crimson);
+  display: block;
+  margin-bottom: 0.7rem;
+  opacity: 0.8;
+}
+
+.sub-card-body p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.65;
+  flex: 1;
+}
+
+/* ═══════════════════════════════════════════
+   FILTER BAR — Search & Category Pills
+   ═══════════════════════════════════════════ */
+
+/* --- Filter Bar Container --- */
+.filter-bar {
+  background: rgba(28, 12, 6, 0.92);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border-bottom: 1px solid rgba(232, 184, 75, 0.1);
+  padding: 1.2rem 3rem;
+  position: sticky;
+  top: 54px;
+  z-index: 90;
+}
+
+.filter-bar--light {
+  background: rgba(253, 246, 227, 0.95);
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  border-bottom: 1px solid rgba(44, 24, 16, 0.08);
+}
+
+.filter-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* --- Search Input --- */
+.filter-search-wrap {
+  position: relative;
+  flex: 0 0 260px;
+}
+
+.filter-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.filter-search {
+  width: 100%;
+  padding: 0.7rem 1rem 0.7rem 2.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(232, 184, 75, 0.2);
+  border-radius: 40px;
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  outline: none;
+  transition: all 0.35s ease;
+}
+
+.filter-search::placeholder {
+  color: rgba(253, 246, 227, 0.4);
+}
+
+.filter-search:focus {
+  border-color: rgba(232, 184, 75, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(232, 184, 75, 0.1);
+}
+
+/* Light variant search */
+.filter-bar--light .filter-search {
+  background: rgba(44, 24, 16, 0.04);
+  border-color: rgba(44, 24, 16, 0.12);
+  color: var(--dark-earth);
+}
+
+.filter-bar--light .filter-search::placeholder {
+  color: rgba(44, 24, 16, 0.35);
+}
+
+.filter-bar--light .filter-search:focus {
+  border-color: rgba(192, 57, 43, 0.4);
+  background: rgba(44, 24, 16, 0.06);
+  box-shadow: 0 0 20px rgba(192, 57, 43, 0.06);
+}
+
+/* --- Filter Pills --- */
+.filter-pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.filter-pill {
+  padding: 0.5rem 1.1rem;
+  background: transparent;
+  border: 1px solid rgba(232, 184, 75, 0.2);
+  border-radius: 30px;
+  color: rgba(253, 246, 227, 0.6);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  white-space: nowrap;
+}
+
+.filter-pill:hover {
+  border-color: rgba(232, 184, 75, 0.5);
+  color: var(--cream);
+  background: rgba(232, 184, 75, 0.08);
+}
+
+.filter-pill.active {
+  background: rgba(232, 184, 75, 0.15);
+  border-color: var(--warm-gold);
+  color: var(--warm-gold);
+  box-shadow: 0 2px 12px rgba(232, 184, 75, 0.15);
+}
+
+/* Light variant pills */
+.filter-bar--light .filter-pill {
+  border-color: rgba(44, 24, 16, 0.12);
+  color: var(--text-light);
+}
+
+.filter-bar--light .filter-pill:hover {
+  border-color: rgba(192, 57, 43, 0.35);
+  color: var(--dark-earth);
+  background: rgba(192, 57, 43, 0.04);
+}
+
+.filter-bar--light .filter-pill.active {
+  background: rgba(192, 57, 43, 0.08);
+  border-color: var(--crimson);
+  color: var(--crimson);
+  box-shadow: 0 2px 12px rgba(192, 57, 43, 0.1);
+}
+
+/* --- Result Count --- */
+.filter-result-count {
+  font-size: 0.72rem;
+  color: rgba(253, 246, 227, 0.35);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.filter-result-count.filtered {
+  color: var(--warm-gold);
+}
+
+.filter-bar--light .filter-result-count {
+  color: var(--text-light);
+  opacity: 0.6;
+}
+
+.filter-bar--light .filter-result-count.filtered {
+  color: var(--crimson);
+  opacity: 1;
+}
+
+/* --- Card Filtering Transitions --- */
+.sub-card {
+  transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.35s ease,
+              transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sub-card.filter-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.sub-card.filter-hidden {
+  opacity: 0;
+  transform: translateY(15px) scale(0.95);
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Grid needs relative for absolute hidden cards */
+.sub-grid {
+  position: relative;
+}
+
+/* --- No Results State --- */
+.no-results {
+  display: none;
+  text-align: center;
+  padding: 4rem 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.no-results.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.no-results-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.no-results h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--dark-earth);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.no-results p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .sub-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sub-hero-content h1 {
+    font-size: 2.4rem;
+  }
+  .sub-nav {
+    padding: 1rem 1.5rem;
+  }
+  .sub-main {
+    padding: 3rem 1.5rem 5rem;
+  }
+  .filter-bar {
+    padding: 1rem 1.5rem;
+  }
+  .filter-bar-inner {
+    gap: 1rem;
+  }
+  .filter-search-wrap {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sub-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+  .sub-hero-content h1 {
+    font-size: 2rem;
+  }
+  .sub-hero {
+    min-height: 300px;
+    background-attachment: scroll;
+  }
+  .filter-pills {
+    gap: 0.4rem;
+  }
+  .filter-pill {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+  }
+  .filter-result-count {
+    width: 100%;
+    text-align: center;
+  }
+}

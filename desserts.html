@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bengali Mishti — The Sweet Heritage of Bengal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="subpages.css">
+</head>
+<body>
+
+<!-- Back Nav -->
+<nav class="sub-nav">
+  <a href="index.html" class="sub-back">← Back to Home</a>
+  <span class="sub-nav-title">Bengali Mishti</span>
+</nav>
+
+<!-- Hero Banner -->
+<header class="sub-hero" style="background-image: url('https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=1400');">
+  <div class="sub-hero-overlay"></div>
+  <div class="sub-hero-content">
+    <p class="sub-eyebrow">The Sweet Life</p>
+    <h1>Bengali <em>মিস্টি</em></h1>
+    <p class="sub-lead">Chhena molded into masterpieces, steeped in sugar syrup and centuries of devotion — explore every sweet Bengal has to offer.</p>
+  </div>
+</header>
+
+<!-- Filter Bar -->
+<div class="filter-bar filter-bar--light">
+  <div class="filter-bar-inner">
+    <div class="filter-search-wrap">
+      <span class="filter-search-icon">🔍</span>
+      <input type="text" id="filterSearch" class="filter-search" placeholder="Search sweets…" autocomplete="off">
+    </div>
+    <div class="filter-pills">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="chhena">🧀 Chhena</button>
+      <button class="filter-pill" data-filter="syrup">🍯 Syrup-Soaked</button>
+      <button class="filter-pill" data-filter="seasonal">❄️ Seasonal</button>
+      <button class="filter-pill" data-filter="rice">🍚 Rice-Based</button>
+    </div>
+    <span class="filter-result-count" id="resultCount">Showing all 12 items</span>
+  </div>
+</div>
+
+<!-- Full Dessert Grid -->
+<main class="sub-main">
+  <div class="sub-grid">
+
+    <div class="sub-card" data-category="chhena" data-name="rasogolla rasgulla">
+      <div class="sub-card-img"><img src="assets\rosogolla.jpg" alt="Rasgulla"></div>
+      <div class="sub-card-body">
+        <h3>Rasogolla</h3>
+        <span class="sub-bn">রসগোল্লা</span>
+        <p>Light, spongy balls of fresh chhena simmered in sugar syrup. Created in Kolkata, beloved worldwide — a GI-tagged pride of Bengal.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="chhena" data-name="sandesh">
+      <div class="sub-card-img"><img src="assets\sandesh.jpg" alt="Sandesh"></div>
+      <div class="sub-card-body">
+        <h3>Sandesh</h3>
+        <span class="sub-bn">সন্দেশ</span>
+        <p>Delicate, barely-sweet confections molded into exquisite shapes — from fish to flowers. The jewel of the Bengali misti-wala's display.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="chhena" data-name="mishti doi">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1602253057119-44d745d9b860?w=600" alt="Mishti Doi"></div>
+      <div class="sub-card-body">
+        <h3>Mishti Doi</h3>
+        <span class="sub-bn">মিষ্টি দই</span>
+        <p>Creamy, caramel-tinted yogurt set in earthen pots — slightly tangy, deeply sweet. An essential finale to any Bengali meal.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="syrup" data-name="langcha">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600" alt="Langcha"></div>
+      <div class="sub-card-body">
+        <h3>Langcha</h3>
+        <span class="sub-bn">লাংচা</span>
+        <p>An elongated, deep-fried chhena sweet dipped in sugar syrup — crispy outside, meltingly soft within. Shaktigarh's legendary contribution.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="chhena" data-name="chomchom">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1624398934850-7e7fb7c24e83?w=600" alt="Chomchom"></div>
+      <div class="sub-card-body">
+        <h3>Chomchom</h3>
+        <span class="sub-bn">চমচম</span>
+        <p>Oval-shaped, firm sweets coated in dried coconut, filled with sweet cream — a specialty of Porabari with roots in undivided Bengal.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="syrup" data-name="pantua">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1571167530149-c1105da4a11e?w=600" alt="Pantua"></div>
+      <div class="sub-card-body">
+        <h3>Pantua</h3>
+        <span class="sub-bn">পান্তুয়া</span>
+        <p>Soft chhena and khoya dumplings fried to golden brown and soaked in cardamom-scented syrup. The Bengali ancestor of the gulab jamun.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="syrup" data-name="malpua">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=600" alt="Malpua"></div>
+      <div class="sub-card-body">
+        <h3>Malpua</h3>
+        <span class="sub-bn">মালপোয়া</span>
+        <p>Crisp-edged pancakes drenched in sugar syrup, served with thickened rabri — a festive monsoon treat that fills the air with sweetness.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="rice" data-name="patishapta">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600" alt="Patishapta"></div>
+      <div class="sub-card-body">
+        <h3>Patishapta</h3>
+        <span class="sub-bn">পাটিসাপটা</span>
+        <p>Delicate rice-flour crepes rolled with kheer or coconut filling — a Makar Sankranti specialty that marks winter's sweetest moments.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="seasonal" data-name="nolen gurer sandesh">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600" alt="Nolen Gurer Sandesh"></div>
+      <div class="sub-card-body">
+        <h3>Nolen Gurer Sandesh</h3>
+        <span class="sub-bn">নলেন গুড়ের সন্দেশ</span>
+        <p>Winter's most prized sweet — chhena infused with date palm jaggery, smoky and deeply aromatic. Available only during the cold months.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="rice" data-name="sitabhog">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=600" alt="Sitabhog"></div>
+      <div class="sub-card-body">
+        <h3>Sitabhog</h3>
+        <span class="sub-bn">সীতাভোগ</span>
+        <p>Fine, rice-like sweet granules from Bardhaman — delicate, fragrant, and unique to Bengal. A GI-tagged heritage delicacy.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="rice" data-name="mihidana">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=600" alt="Mihidana"></div>
+      <div class="sub-card-body">
+        <h3>Mihidana</h3>
+        <span class="sub-bn">মিহিদানা</span>
+        <p>Tiny golden boondi pearls soaked in saffron syrup — Sitabhog's inseparable pair from Bardhaman. Together they make a royal duo.</p>
+      </div>
+    </div>
+
+    <div class="sub-card" data-category="chhena" data-name="kheer kadam">
+      <div class="sub-card-img"><img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600" alt="Kheer Kadam"></div>
+      <div class="sub-card-body">
+        <h3>Kheer Kadam</h3>
+        <span class="sub-bn">ক্ষীরকদম</span>
+        <p>A ball of khoya encasing a small rasgulla at its heart — the two-in-one genius of Bengali confectionery, sweet and surprising.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- No Results State -->
+  <div class="no-results" id="noResults">
+    <span class="no-results-icon">🍬</span>
+    <h3>No sweets found</h3>
+    <p>Try a different search term or category</p>
+  </div>
+</main>
+
+<script src="filter.js"></script>
+</body>
+</html>
