@@ -1,20 +1,16 @@
 
-  // ═══════════════════════════════════════════
-  //  NAVBAR — Scroll Effect, Scroll Spy, Mobile Menu
-  // ═══════════════════════════════════════════
-
   const navbar = document.getElementById('navbar');
   const navLinks = document.querySelectorAll('.nav-link');
   const navLinksContainer = document.getElementById('navLinks');
   const hamburger = document.getElementById('navHamburger');
   const sections = document.querySelectorAll('section[id]');
 
-  // Scroll → floating pill + active section tracking
+
   window.addEventListener('scroll', () => {
-    // Floating pill toggle
+ 
     navbar.classList.toggle('scrolled', window.scrollY > 80);
 
-    // Scroll spy — highlight active section link
+   
     let current = '';
     sections.forEach(section => {
       const sectionTop = section.offsetTop - 200;
@@ -32,13 +28,13 @@
     });
   }, { passive: true });
 
-  // Hamburger toggle
+
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
     navLinksContainer.classList.toggle('open');
   });
 
-  // Close mobile menu on link click
+ 
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('open');
@@ -46,23 +42,17 @@
     });
   });
 
-  // ═══════════════════════════════════════════
-  //  CUISINE MARQUEE — Clone cards for infinite loop
-  // ═══════════════════════════════════════════
+
 
   document.querySelectorAll('.marquee-track').forEach(track => {
     const cards = track.querySelectorAll('.cuisine-card');
-    // Clone all cards and append for seamless loop
+  
     cards.forEach(card => {
       track.appendChild(card.cloneNode(true));
     });
   });
 
-  // ═══════════════════════════════════════════
-  //  SCROLL FLOAT ANIMATION ENGINE
-  // ═══════════════════════════════════════════
 
-  // Assign directional float variants to cards automatically
   const floatVariants = ['float-left', 'float-right', 'float-scale', 'float-rotate'];
   const cardSelectors = [
     '.dest-card.reveal',
@@ -74,22 +64,21 @@
 
   cardSelectors.forEach(selector => {
     document.querySelectorAll(selector).forEach((card, i) => {
-      // Assign a float variant based on position
+    
       const variant = floatVariants[i % floatVariants.length];
       card.classList.add(variant);
 
-      // Assign a random float-seed for desynchronized idle animation
+     
       card.style.setProperty('--float-seed', (Math.random() * 3).toFixed(2));
     });
   });
 
-  // Assign parallax depth classes for visual variety
   document.querySelectorAll('.reveal').forEach((el, i) => {
     if (i % 5 === 0) el.classList.add('parallax-slow');
     if (i % 7 === 0) el.classList.add('parallax-fast');
   });
 
-  // Intersection Observer — reveal elements as they scroll into view
+  
   const reveals = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -104,11 +93,7 @@
 
   reveals.forEach(el => revealObserver.observe(el));
 
-  // ═══════════════════════════════════════════
-  //  SMOOTH PARALLAX OFFSET ON SCROLL
-  // ═══════════════════════════════════════════
 
-  // Subtle parallax — cards shift slightly based on scroll position
   let ticking = false;
   const parallaxCards = document.querySelectorAll(
     '.dest-card.reveal.visible, .cuisine-card.reveal.visible, ' +
@@ -128,7 +113,7 @@
       const rect = card.getBoundingClientRect();
       const viewH = window.innerHeight;
 
-      // Only apply parallax to cards currently in viewport
+     
       if (rect.top < viewH && rect.bottom > 0) {
         const progress = (viewH - rect.top) / (viewH + rect.height);
         const depth = ((i % 3) + 1) * 0.5; // 0.5, 1.0, or 1.5
@@ -146,9 +131,7 @@
     }
   }, { passive: true });
 
-  // ═══════════════════════════════════════════
-  //  SPIRITUAL TABS
-  // ═══════════════════════════════════════════
+
 
   function showTab(name) {
     document.querySelectorAll('.spiritual-panel').forEach(p => p.classList.remove('active'));
@@ -156,11 +139,11 @@
     document.getElementById('tab-' + name).classList.add('active');
     event.currentTarget.classList.add('active');
 
-    // Re-trigger reveal animations for newly visible cards
+   
     const panel = document.getElementById('tab-' + name);
     panel.querySelectorAll('.reveal').forEach(el => {
       el.classList.remove('visible');
-      // Small delay to reset animation state
+  
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           revealObserver.observe(el);
@@ -169,9 +152,6 @@
     });
   }
 
-  // ═══════════════════════════════════════════
-  //  REVIEWS SLIDESHOW
-  // ═══════════════════════════════════════════
 
   (function initReviewsSlider() {
     const track      = document.getElementById('reviewsTrack');
@@ -184,9 +164,9 @@
 
     let currentIndex = 0;
     let autoTimer    = null;
-    const AUTO_DELAY = 3000; // ms between auto-advances
+    const AUTO_DELAY = 3000;
 
-    // How many cards are visible at once (responsive)
+    
     function getVisible() {
       const w = window.innerWidth;
       if (w <= 720) return 1;
@@ -198,7 +178,7 @@
       return Array.from(track.querySelectorAll('.review-card'));
     }
 
-    // Build / rebuild dot indicators
+   
     function buildDots() {
       dotsWrap.innerHTML = '';
       const cards   = getCards();
@@ -222,10 +202,10 @@
     function getOffset(index) {
       const cards   = getCards();
       if (!cards.length) return 0;
-      const gap     = 28; // px — matches CSS gap 1.75rem ≈ 28px
+      const gap     = 28;
       let cardW     = cards[0].offsetWidth;
       if (!cardW && outer) {
-        // Fallback calculation if element isn't fully laid out yet
+   
         cardW = (outer.offsetWidth - (gap * (getVisible() - 1))) / getVisible();
       }
       return index * (cardW + gap);
@@ -264,7 +244,7 @@
       goTo(currentIndex > 0 ? currentIndex - 1 : maxIdx);
     }
 
-    // Auto-play
+  
     function startAuto() {
       stopAuto();
       autoTimer = setInterval(next, AUTO_DELAY);
@@ -274,15 +254,15 @@
       if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
     }
 
-    // Pause on hover
+   
     outer.addEventListener('mouseenter', stopAuto);
     outer.addEventListener('mouseleave', startAuto);
 
-    // Arrow clicks
+
     btnPrev.addEventListener('click', () => { stopAuto(); prev(); startAuto(); });
     btnNext.addEventListener('click', () => { stopAuto(); next(); startAuto(); });
 
-    // Touch / swipe support
+   
     let touchStartX = 0;
     outer.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
     outer.addEventListener('touchend', e => {
@@ -290,7 +270,7 @@
       if (Math.abs(dx) > 50) { stopAuto(); dx < 0 ? next() : prev(); startAuto(); }
     }, { passive: true });
 
-    // Rebuild on resize
+    
     let resizeTimer;
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimer);
@@ -302,12 +282,11 @@
       }, 200);
     });
 
-    // Init
+
     buildDots();
     goTo(0);
     startAuto();
 
-    // Expose for the form to add new cards
     window._reviewsSlider = { addCard, buildDots, getCards, getVisible };
 
     function addCard(name, location, rating, text) {
@@ -343,7 +322,7 @@
 
       track.appendChild(card);
 
-      // Animate in
+      
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           card.style.opacity = '1';
@@ -358,9 +337,6 @@
     }
   })();
 
-  // ═══════════════════════════════════════════
-  //  REVIEW FORM — Star Rating + Submission
-  // ═══════════════════════════════════════════
 
   (function initReviewForm() {
     const form        = document.getElementById('reviewForm');
@@ -371,7 +347,7 @@
 
     let selectedRating = 0;
 
-    // Star hover + click
+   
     starBtns.forEach(btn => {
       const val = parseInt(btn.dataset.val, 10);
 
@@ -397,7 +373,7 @@
       const text     = document.getElementById('reviewText').value.trim();
 
       if (!name || !text || !selectedRating) {
-        // Shake invalid fields
+      
         if (!name) shakeFocus(document.getElementById('reviewerName'));
         if (!text) shakeFocus(document.getElementById('reviewText'));
         if (!selectedRating) {
@@ -410,12 +386,12 @@
         return;
       }
 
-      // Add card to slider
+     
       if (window._reviewsSlider) {
         window._reviewsSlider.addCard(name, location, selectedRating, text);
       }
 
-      // Success feedback
+    
       successMsg.classList.add('visible');
       form.reset();
       selectedRating = 0;

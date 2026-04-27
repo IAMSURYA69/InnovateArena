@@ -1,8 +1,4 @@
-/* ═══════════════════════════════════════════
-   SUBPAGE STYLES — Cuisine & Desserts
-   ═══════════════════════════════════════════ */
 
-/* --- Sub Nav --- */
 .sub-nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -40,7 +36,7 @@
   letter-spacing: 0.02em;
 }
 
-/* --- Hero Banner --- */
+
 .sub-hero {
   position: relative;
   height: 50vh;
@@ -104,14 +100,14 @@
   line-height: 1.7;
 }
 
-/* --- Main Content --- */
+
 .sub-main {
   padding: 4rem 3rem 6rem;
   background: var(--cream);
   min-height: 60vh;
 }
 
-/* --- Card Grid --- */
+
 .sub-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -120,7 +116,7 @@
   margin: 0 auto;
 }
 
-/* --- Card --- */
+
 .sub-card {
   background: #fff;
   border-radius: 14px;
@@ -189,11 +185,9 @@
   flex: 1;
 }
 
-/* ═══════════════════════════════════════════
-   FILTER BAR — Search & Category Pills
-   ═══════════════════════════════════════════ */
 
-/* --- Filter Bar Container --- */
+
+
 .filter-bar {
   background: rgba(28, 12, 6, 0.92);
   backdrop-filter: blur(20px) saturate(1.4);
@@ -221,7 +215,7 @@
   flex-wrap: wrap;
 }
 
-/* --- Search Input --- */
+
 .filter-search-wrap {
   position: relative;
   flex: 0 0 260px;
@@ -261,7 +255,7 @@
   box-shadow: 0 0 20px rgba(232, 184, 75, 0.1);
 }
 
-/* Light variant search */
+
 .filter-bar--light .filter-search {
   background: rgba(44, 24, 16, 0.04);
   border-color: rgba(44, 24, 16, 0.12);
@@ -278,7 +272,7 @@
   box-shadow: 0 0 20px rgba(192, 57, 43, 0.06);
 }
 
-/* --- Filter Pills --- */
+
 .filter-pills {
   display: flex;
   gap: 0.5rem;
@@ -315,7 +309,7 @@
   box-shadow: 0 2px 12px rgba(232, 184, 75, 0.15);
 }
 
-/* Light variant pills */
+
 .filter-bar--light .filter-pill {
   border-color: rgba(44, 24, 16, 0.12);
   color: var(--text-light);
@@ -334,7 +328,7 @@
   box-shadow: 0 2px 12px rgba(192, 57, 43, 0.1);
 }
 
-/* --- Result Count --- */
+
 .filter-result-count {
   font-size: 0.72rem;
   color: rgba(253, 246, 227, 0.35);
@@ -357,7 +351,7 @@
   opacity: 1;
 }
 
-/* --- Card Filtering Transitions --- */
+
 .sub-card {
   transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               opacity 0.35s ease,
@@ -378,12 +372,10 @@
   visibility: hidden;
 }
 
-/* Grid needs relative for absolute hidden cards */
+
 .sub-grid {
   position: relative;
 }
-
-/* --- No Results State --- */
 .no-results {
   display: none;
   text-align: center;
@@ -419,7 +411,6 @@
   color: var(--text-light);
 }
 
-/* --- Responsive --- */
 @media (max-width: 900px) {
   .sub-grid {
     grid-template-columns: repeat(2, 1fr);
